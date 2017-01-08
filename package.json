@@ -1,0 +1,16 @@
+{
+  "name": "yawpe",
+  "version": "0.0.0",
+  "description": "A simple template for web based presetnation based on VueJS - YAWPE : Yet Another Web Presentation Engine",
+  "main": "index.html",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.1.8"
+  },
+  "repository" : {
+    "type" : "git"
+  , "url" : "https://github.com/cedricmeleard/yawpe.git"
+  }
+}

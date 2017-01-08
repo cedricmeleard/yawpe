@@ -1,0 +1,9 @@
+.section-fade-transition {
+  visibility: visible;
+  opacity: 1;
+}
+
+.section-fade-enter,
+.section-fade-leave {
+  opacity: 0;
+}

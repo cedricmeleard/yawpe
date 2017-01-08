@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Presentation using xAPI</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="app/lib/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="app/lib/2.5.3-crypto-sha1.js"></script>
+    <script type="text/javascript" src="app/lib/base64.js"></script>
+    <script type="text/javascript" src="app/lib/xapiwrapper.min.js"></script>
+</head>
+<body>
+<div class="wrapper" id="myApp">
+    <header class="main-header">{{title}} - {{ page + 1 }} / {{ sections.length }}</header>
+    <div class="container">
+        <item-section :item="current" :part="part"></item-section>
+    </div>
+    <footer class="main-footer">{{ author }}</footer>
+</div>
+<script src="node_modules/vue/dist/vue.js"></script>
+<!-- config -->
+<script src="app/config/config.js"></script>
+<!-- app -->
+<script src="app/components/item-section.js"></script>
+<script src="app/index.js"></script>
+</body>
+</html>

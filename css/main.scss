@@ -1,0 +1,41 @@
+@import "partials/vars";
+@import "partials/animate";
+@import "components/item-section";
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: $font-stack;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100vh;
+
+  .main-header {
+    height: 80px;
+    font-size: 1.6em;
+    text-transform: uppercase;
+  }
+
+  .container {
+  }
+
+  .main-footer{
+    height: 40px;
+  }
+
+}
