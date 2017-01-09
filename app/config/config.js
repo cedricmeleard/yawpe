@@ -6,12 +6,12 @@ var config = {
     author: 'Cédric Méléard - cedric.meleard@gmail.com',
     sections: [
         {
+            id : 1,
             title: 'First page',
             content: 'première page'
         },
         {
-            title: 'Second page',
-            content: 'seconde page',
+            id : 2,
             sections : [
                 {
                     title : 'first section'
@@ -19,11 +19,15 @@ var config = {
                 {
                     title : 'second section',
                     content : 'section content'
+                },
+                {
+                    title : 'third section',
+                    content : 'section content'
                 }
             ]
-        }
-        ,
+        },
         {
+            id : 3,
             title: 'Third page'
         }
     ]

@@ -1,9 +1,53 @@
-.section-fade-transition {
-  visibility: visible;
-  opacity: 1;
+.section-fade-leave, .section-fade-leave-active {
+  animation: slide-left-opacify .5s;
+}
+.section-fade-enter, .section-fade-enter-active
+  /* .component-fade-leave-active for <2.1.8 */ {
+  animation: slide-right-opacify .5s;
 }
 
-.section-fade-enter,
-.section-fade-leave {
-  opacity: 0;
+@keyframes slide-right-opacify {
+  from {
+    opacity: 0;
+    transform : translateX(100vh);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-left-opacify {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform : translateX(-100vh);
+  }
+}
+
+.part-fade-leave, .part-fade-leave-active {
+  animation: slide-down-opacify .5s;
+}
+.part-fade-enter, .part-fade-enter-active
+  /* .component-fade-leave-active for <2.1.8 */ {
+  animation: slide-up-opacify .5s;
+}
+
+@keyframes slide-down-opacify {
+  from {
+    opacity: 0;
+    transform : translateY(-100vh);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-up-opacify {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform : translateY(100vh);
+  }
 }

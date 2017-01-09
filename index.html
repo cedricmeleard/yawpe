@@ -13,7 +13,9 @@
 <div class="wrapper" id="myApp">
     <header class="main-header">{{title}} - {{ page + 1 }} / {{ sections.length }}</header>
     <div class="container">
-        <item-section :item="current" :part="part"></item-section>
+        <transition name="section-fade" mode="out-in">
+            <item-section :item="current" :part="part" v-bind:key="current.id"></item-section>
+        </transition>
     </div>
     <footer class="main-footer">{{ author }}</footer>
 </div>

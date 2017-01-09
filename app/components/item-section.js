@@ -19,9 +19,9 @@ Vue.component('item-section', {
         }
     },
     template: `
-        <section class="item-section" transition="section-fade" >
-            <header class="section-header">{{ section.title }}</header>
-            <article class="section-content">{{ section.content }}</article>
-            <footer class="section-footer"></footer>
+        <section class="item-section">        
+            <header v-if="section.title" class="section-header">{{ section.title }}</header>
+            <article v-if="section.content" class="section-content">{{ section.content }}</article>
+            <footer class="section-footer"></footer>        
         </section>`
 });
