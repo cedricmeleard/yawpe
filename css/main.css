@@ -40,22 +40,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all .3s ease;
-  width: 100vh; }
-  .item-section .section-header {
-    font-size: 4.5em;
+  transition: all .3s ease; }
+  .item-section .section-header,
+  .item-section .section-footer {
+    font-size: 4em;
     font-weight: bold;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
   .item-section .section-content {
     font-size: 2em;
     padding: 0 40px; }
 
 .nav-buttons .simple-button {
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: white;
-}
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white; }
 
 html, body {
   padding: 0;
@@ -80,12 +80,13 @@ html {
     height: 80px;
     font-size: 1.6em;
     text-transform: uppercase; }
+  .wrapper .container {
+    padding: 10px; }
   .wrapper .main-footer {
-      height: 30px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 90%;
-  }
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%; }
 
 /*# sourceMappingURL=main.css.map */

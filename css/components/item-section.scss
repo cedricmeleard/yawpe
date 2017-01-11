@@ -4,21 +4,17 @@
   align-items: center;
 
   transition: all .3s ease;
-  width: 100vh;
 
-  .section-header {
-    font-size: 4.5em;
+  .section-header,
+  .section-footer {
+    font-size: 4em;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
   }
 
   .section-content {
     font-size: 2em;
     padding: 0 40px;
   }
-
-  .section-footer {
-
-  }
-
 }

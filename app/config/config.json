@@ -4,28 +4,50 @@
   "sections": [
     {
       "id": 1,
-      "title": "First page",
-      "content": "première page"
+      "title": "this is First page title",
+      "content": "You can add some text in content property of a section"
     },
     {
       "id": 2,
       "sections": [
         {
-          "title": "first section"
+          "title": "this is a subsection title",
+          "content": "this will replace section"
         },
         {
-          "title": "second section",
-          "content": "section content"
+          "title": "second sub-section"
         },
         {
-          "title": "third section",
-          "content": "section content"
+          "title": "third sub-section",
+          "content": "section content is optional"
+        },
+        {
+          "content": "same as title"
         }
       ]
     },
     {
-      "id": 3,
-      "title": "Third page"
+      "id": 4,
+      "title": "Third page",
+      "content": [
+        "section content has partial markdown support",
+        "thus you can write block quote like this :",
+        "> `var s = \"some code\";`",
+        "> `alert(s);`",
+        "or add images like this :",
+        "> ![alt text](https://www.google.fr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png \"Logo Title Text 1\")"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Last page",
+      "content": [
+        "For more readable data, content can be an array",
+        "[\"line 1\", \"line 2\" ] will produce :",
+        "line 1",
+        "line 2",
+        "[See all markdown available](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)"
+      ]
     }
   ]
 }
