@@ -39,29 +39,44 @@ var app = new Vue({
                 return;
             if (this.part < this.current.sections.length - 1)
                 this.part++;
+        },
+        navigate: function (keyCode) {
+            if (keyCode == 37) { // left
+                this.previous();
+            }
+            else if (keyCode == 39) { // right
+                this.next();
+            }
+            else if (keyCode == 40) { // down
+                this.down();
+            }
+            else if (keyCode == 38) { // up
+                this.up();
+            }
         }
     }
 });
 
-//TODO à modifier
+function getJSON(url, callback) {
+    let xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+        callback(JSON.parse(this.responseText))
+    };
+    xhr.open("GET", url, true);
+    xhr.send();
+}
+getJSON('app/config/config.json', data => {
 //inject config
-app.title = config.title;
-app.author = config.author;
-app.sections = config.sections;
+    app.title = data.title;
+    app.author = data.author;
+    app.sections = data.sections;
+});
+//map keyboard navigation event
+addEventListener('keydown', e => {
+    app.navigate(e.keyCode);
+});
+//listen on move event triggered
+app.$on('move', function (keycode) {
+    app.navigate(keycode);
+});
 
-//add event navigation
-window.addEventListener('keydown',
-    function (e) {
-        if (e.keyCode == 37) { // left
-            app.previous();
-        }
-        else if (e.keyCode == 39) { // right
-            app.next();
-        }
-        else if (e.keyCode == 40) { // down
-            app.down();
-        }
-        else if (e.keyCode == 38) { // up
-            app.up();
-        }
-    }, false);

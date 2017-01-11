@@ -17,13 +17,15 @@
             <item-section :item="current" :part="part" v-bind:key="current.id"></item-section>
         </transition>
     </div>
-    <footer class="main-footer">{{ author }}</footer>
+    <footer class="main-footer">
+        {{ author }}
+        <nav-buttons></nav-buttons>
+    </footer>
 </div>
 <script src="node_modules/vue/dist/vue.js"></script>
-<!-- config -->
-<script src="app/config/config.js"></script>
 <!-- app -->
 <script src="app/components/item-section.js"></script>
+<script src="app/components/nav-buttons.js"></script>
 <script src="app/index.js"></script>
 </body>
 </html>

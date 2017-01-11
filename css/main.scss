@@ -1,6 +1,7 @@
 @import "partials/vars";
 @import "partials/animate";
 @import "components/item-section";
+@import "components/nav-buttons";
 
 html, body {
   padding: 0;
@@ -36,7 +37,10 @@ html {
   }
 
   .main-footer{
-    height: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
   }
-
 }
