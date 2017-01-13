@@ -51,3 +51,31 @@
     transform : translateY(100vh);
   }
 }
+
+.fade-leave, .fade-leave-active {
+  animation: opacify .5s;
+}
+
+.fade-enter, .fade-enter-active
+  /* .component-fade-leave-active for <2.1.8 */
+{
+  animation: unopacify .5s;
+}
+
+@keyframes opacify {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes unopacify {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

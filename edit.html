@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Json creator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document Presentation using xAPI</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="node_modules/clipboard/dist/clipboard.min.js"></script>
+</head>
+<body class="edit">
+<div class="wrapper" id="myApp">
+    <header class="main-header">Creation</header>
+    <div class="container">
+        <div class="form-group">
+            <input id="jsondatas" v-model="jsondatas" class="full-width" readonly>
+        </div>
+        <button class="js-copy" data-clipboard-action="copy" data-clipboard-target="#jsondatas">Copier</button>
+        <section>
+            <header>
+                <div class="form-group">
+                    <label for="title">Titre</label>
+                    <input id="title" v-model="title" placeholder="Enter un titre">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input id="author" v-model="author" placeholder="Entrer l'auteur">
+                </div>
+            </header>
+            <article>
+                <button @click="addSection">Ajouter une section</button>
+                <ul class="section-list">
+                    <li v-for="(section, index) in sections">
+                        <section-edit :section="section" :index="index"></section-edit>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </div>
+    <footer>v {{ version }}</footer>
+</div>
+<script src="node_modules/markdown/lib/markdown.js"></script>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="app/edit.js"></script>
+</body>
+</html>

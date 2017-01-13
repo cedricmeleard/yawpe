@@ -1,12 +1,18 @@
 @import "partials/vars";
 @import "partials/animate";
+@import "partials/controls";
 @import "components/item-section";
 @import "components/nav-buttons";
+@import "components/forms";
 
 html, body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+}
+
+body.edit {
+  overflow-y: scroll;
 }
 
 html {
@@ -33,11 +39,22 @@ html {
     height: 80px;
     font-size: 1.6em;
     text-transform: uppercase;
+    text-align: center;
   }
 
   .container {
     padding: 10px;
     background-color: $background-section-color;
+
+    .section-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .section {
+        margin: 0 0 40px;
+      }
+    }
   }
 
   .main-footer{

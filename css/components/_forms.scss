@@ -1,0 +1,21 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+
+  }
+
+  input {
+    border: none;
+    padding: 10px;
+    min-width: 350px;
+    margin: 3px 0 15px;
+    border-radius: 3px;
+
+    &.full-width {
+      min-width: 480px;
+    }
+  }
+}
+
