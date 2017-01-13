@@ -36,7 +36,6 @@
   to {
     opacity: 0;
     transform: translateY(100vh); } }
-
 .fade-leave, .fade-leave-active {
     animation: opacify .5s;
 }
@@ -53,7 +52,6 @@
         opacity: 0;
     }
 }
-
 @keyframes unopacify {
     from {
         opacity: 0;
@@ -63,7 +61,7 @@
     }
 }
 
-button {
+button.plain {
     color: #607D8B;
     margin: 10px 0;
     padding: 10px;
@@ -74,7 +72,7 @@ button {
     text-transform: uppercase;
 }
 
-button:hover {
+button.plain:hover {
     background-color: #90A4AE;
     color: white;
     cursor: pointer;

@@ -4,8 +4,8 @@
   "description": "A simple template for web based presetnation based on VueJS - YAWPE : Yet Another Web Presentation Engine",
   "main": "index.html",
   "scripts": {},
-  "author": "",
-  "license": "ISC",
+  "author": "cédric méléard <cedric.meleard@gmal.com>",
+  "license": "MIT",
   "dependencies": {
     "clipboard": "^1.5.16",
     "markdown": "^0.5.0",
