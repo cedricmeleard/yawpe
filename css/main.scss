@@ -11,7 +11,9 @@ html, body {
 
 html {
   font-family: $font-stack;
-  background-color: $background-color;
+  background: $background-image $background-color;
+  background-size: cover;
+
   color: $text-color;
 }
 
@@ -35,6 +37,7 @@ html {
 
   .container {
     padding: 10px;
+    background-color: $background-section-color;
   }
 
   .main-footer{
