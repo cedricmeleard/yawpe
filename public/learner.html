@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document Presentation using xAPI</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="wrapper" id="myApp">
+    <header class="main-header">{{title}} - {{ page + 1 }} / {{ sections.length }}</header>
+    <div v-if="loading" class="container">
+        <section class="item-section">
+            <header class="section-header">En attente</header>
+        </section>
+    </div>
+    <div v-else class="container">
+        <transition name="section-fade" mode="out-in">
+            <item-section :item="current" :part="part" v-bind:key="current.id"></item-section>
+        </transition>
+    </div>
+    <footer class="main-footer">
+        {{ author }}
+    </footer>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="vendors/markdown.js"></script>
+<script src="vendors/vue.js"></script>
+<!-- app -->
+<script src="app/components/item-section.js"></script>
+<script src="app/learner.js"></script>
+</body>
+</html>

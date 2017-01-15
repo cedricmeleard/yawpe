@@ -1,3 +1,6 @@
+/**
+ * Created by cedric on 15/01/17.
+ */
 var app = new Vue({
     el: '#myApp',
     data: {
@@ -57,35 +60,12 @@ var app = new Vue({
     }
 });
 
-function getJSON(url, callback) {
-    let xhr = new XMLHttpRequest();
-    xhr.onload = function () {
-        callback(JSON.parse(this.responseText))
-    };
-    xhr.open("GET", url, true);
-    xhr.send();
-}
-var locals = localStorage.getItem('temp-save-datas');
-if (locals) {
-    var savedDatas = JSON.parse(locals);
-    app.title = savedDatas.title;
-    app.author = savedDatas.author;
-    app.sections = savedDatas.sections;
-}
-else {
-    getJSON('app/config/config.json', data => {
-//inject config
-        app.title = data.title;
-        app.author = data.author;
-        app.sections = data.sections;
-    });
-}
-//map keyboard navigation event
-addEventListener('keydown', e => {
-    app.navigate(e.keyCode);
+var socket = io();
+socket.on('start presentation', function (config) {
+    app.title = config.title;
+    app.author = config.author;
+    app.sections = config.sections;
 });
-//listen on move event triggered
-app.$on('move', function (keycode) {
+socket.on('move presentation', function (keycode) {
     app.navigate(keycode);
 });
-
