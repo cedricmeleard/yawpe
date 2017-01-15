@@ -53,6 +53,10 @@ html {
 
       .section {
         margin: 0 0 40px;
+
+        ul, li {
+          list-style: none;
+        }
       }
     }
   }

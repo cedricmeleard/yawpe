@@ -2,10 +2,10 @@ var app = new Vue({
     el: '#myApp',
     data: {
         page: 0,
-        author : '',
-        title : '',
-        sections : [],
-        part : 0
+        author: '',
+        title: '',
+        sections: [],
+        part: 0
     },
     computed: {
         current() {
@@ -29,13 +29,13 @@ var app = new Vue({
                 this.page--;
         },
         up: function () {
-            if (!this.current  || !this.current.sections)
+            if (!this.current || !this.current.sections)
                 return;
             if (this.part > 0)
                 this.part--;
         },
         down: function () {
-            if (!this.current  || !this.current.sections)
+            if (!this.current || !this.current.sections)
                 return;
             if (this.part < this.current.sections.length - 1)
                 this.part++;
@@ -65,12 +65,21 @@ function getJSON(url, callback) {
     xhr.open("GET", url, true);
     xhr.send();
 }
-getJSON('app/config/config.json', data => {
+var locals = localStorage.getItem('temp-save-datas');
+if (locals) {
+    var savedDatas = JSON.parse(locals);
+    app.title = savedDatas.title;
+    app.author = savedDatas.author;
+    app.sections = savedDatas.sections;
+}
+else {
+    getJSON('app/config/config.json', data => {
 //inject config
-    app.title = data.title;
-    app.author = data.author;
-    app.sections = data.sections;
-});
+        app.title = data.title;
+        app.author = data.author;
+        app.sections = data.sections;
+    });
+}
 //map keyboard navigation event
 addEventListener('keydown', e => {
     app.navigate(e.keyCode);

@@ -16,6 +16,7 @@
             <input id="jsondatas" v-model="jsondatas" class="full-width" readonly>
         </div>
         <button class="js-copy plain" data-clipboard-action="copy" data-clipboard-target="#jsondatas">Copier</button>
+        <button class="plain" @click="save">Enregistrer</button>
         <section>
             <header>
                 <div class="form-group">
@@ -31,7 +32,7 @@
                 <button class="plain" @click="addSection">Ajouter une section</button>
                 <ul class="section-list">
                     <li v-for="(section, index) in sections">
-                        <section-edit :section="section" :index="index"></section-edit>
+                        <section-edit :section="section" :index="index" v-on:remove="remove"></section-edit>
                     </li>
                 </ul>
             </article>

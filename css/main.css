@@ -61,18 +61,26 @@
     }
 }
 
-button.plain {
-    color: #607D8B;
-    margin: 10px 0;
-    padding: 10px;
+button {
     border: none;
-    border-radius: 3px;
-    transition: all .3s ease;
-    font-size: 1.2em;
     text-transform: uppercase;
+    transition: all .3s ease;
+    color: #607D8B;
+    border-radius: 3px;
 }
 
-button.plain:hover {
+button.plain {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+button.icon {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+button:hover {
     background-color: #90A4AE;
     color: white;
     cursor: pointer;
@@ -92,6 +100,19 @@ button.plain:hover {
   .item-section .section-content {
     font-size: 2em;
     padding: 0 40px; }
+
+.section-edit .section-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-edit .section-title .title-text {
+    font-size: 2em;
+}
+
+.section-edit .sub-section {
+    margin-bottom: 30px;
+}
 
 .nav-buttons .simple-button {
   cursor: pointer;
@@ -114,6 +135,10 @@ button.plain:hover {
 
 .form-group input.full-width {
     min-width: 480px;
+}
+
+.hidden {
+    display: none;
 }
 
 html, body {
@@ -158,6 +183,10 @@ html {
 
 .wrapper .container .section-list .section {
     margin: 0 0 40px;
+}
+
+.wrapper .container .section-list .section ul, .wrapper .container .section-list .section li {
+    list-style: none;
 }
   .wrapper .main-footer {
     height: 30px;

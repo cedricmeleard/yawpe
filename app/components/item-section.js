@@ -10,7 +10,7 @@ Vue.component('item-section', {
     },
     computed: {
         section () {
-            if (this.item.sections) {
+            if (this.item.sections && this.item.sections.length != 0) {
                 return this.item.sections[this.part];
             }
             else {

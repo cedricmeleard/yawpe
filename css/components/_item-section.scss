@@ -17,3 +17,19 @@
     padding: 0 40px;
   }
 }
+
+.section-edit {
+
+  .section-title {
+    display: flex;
+    justify-content: space-between;
+
+    .title-text {
+      font-size: 2em;
+    }
+  }
+
+  .sub-section {
+    margin-bottom: 30px;
+  }
+}
